@@ -6,7 +6,10 @@ body {
 
 h1,h2,h3, .btn {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
+
+/* Header */
 
 header .carousel-item {
     min-height: 100vh;
@@ -25,7 +28,7 @@ header .carousel-item2 {
 }
 
 header .carousel-item3 {
-    background-image: url(/images/home-bg-slideshow2.jpg);
+    background-image: url(/images/home-bg-slideshow3.jpg);
 }
 
 header .carousel-inner::before {
@@ -43,6 +46,7 @@ header .carousel-inner::before {
 header .card-img-overlay {
     width: 100vw;
     padding: 0 26%;
+    z-index: 1;
 }
 
 header p {
@@ -79,6 +83,94 @@ header .btn {
         padding: 0 5%;
     }
 }
+
+/* Navbar */
+nav .navbar-brand {
+    color: #505050;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 40px;
+}
+
+nav .navbar-nav{
+    height: 50px;
+    align-items: center;
+}
+
+nav .navbar-nav .nav-link {
+    transition: .4s ease-in-out;
+}
+
+nav .navbar-nav .nav-link:hover {
+    color: #0044ff;
+}
+
+nav .navbar-nav .nav-link.active {
+    color: #0044ff;
+}
+
+/* Section Features */
+section#features span {
+    position: absolute;
+    top:0;
+    margin-top: -42px;
+}
+
+section#features span i{
+    height: 85px;
+    width: 85px;
+    text-align: center;
+}
+
+section#features h3{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    opacity: .8;
+}
+
+@media (max-width: 991.98px){
+    section#features .card3 {
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: 765.98px){
+    section#features .card2 {
+        margin-top: 45px;
+    }
+}
+
+/* Section About */
+section#about h3 {
+    color: #444;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 1px;
+}
+
+
+/* General */
+section{
+    padding: 100px 0;
+}
+
+section .row-down {
+    padding-bottom: 85px;
+}
+
+section h1 {
+    color: #333;
+}
+
+section h4 {
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+
+
 
 
 
