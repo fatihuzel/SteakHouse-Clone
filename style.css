@@ -4,7 +4,11 @@ body {
     font-weight: 300;
 }
 
-h1,h2,h3, .btn, p {
+h1,
+h2,
+h3,
+.btn,
+p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 }
@@ -93,7 +97,7 @@ nav .navbar-brand {
     line-height: 40px;
 }
 
-nav .navbar-nav{
+nav .navbar-nav {
     height: 50px;
     align-items: center;
 }
@@ -113,30 +117,30 @@ nav .navbar-nav .nav-link.active {
 /* Section Features */
 section#features span {
     position: absolute;
-    top:0;
+    top: 0;
     margin-top: -42.5px;
 }
 
-section#features span i{
+section#features span i {
     height: 85px;
     width: 85px;
     text-align: center;
 }
 
-section#features h3{
+section#features h3 {
     font-size: 20px;
     margin-top: 20px;
     margin-bottom: 10px;
     opacity: .8;
 }
 
-@media (max-width: 991.98px){
+@media (max-width: 991.98px) {
     section#features .card3 {
         margin-top: 45px;
     }
 }
 
-@media (max-width: 765.98px){
+@media (max-width: 765.98px) {
     section#features .card2 {
         margin-top: 45px;
     }
@@ -213,17 +217,105 @@ section#menu .price {
     position: absolute;
     font-size: 20px;
     font-weight: bold;
-    bottom: 13%;
-    left: 3%;
+    bottom: 10%;
+    left: 5%;
 }
 
-section#menu p {
+@media (max-width: 575.98px) {
+    section#menu .price {
+        bottom: 15px;
+        left: 10px;
+    }
+}
+
+/* Section Team */
+section#team .card-body {
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    z-index: 1;
+}
+
+section#team p {
+    font-size: 12px;
+}
+
+section#team .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+section#team .card-body {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out 0.5s;
+    background: #fff;
+}
+
+section#team .card-body:hover {
+    background: #ff1900;
+    height: 100%;
+    opacity: .7;
+    color: #fff;
+}
+
+section#team .card-body .icon {
+    height: 40px;
+    position: absolute;
+    margin-bottom: -100px;
+    display: flex;
+}
+
+section#team .card-body .icon:hover {
+    height: 40px;
+}
+
+section#team .card-body .icon a {
+    text-decoration: none;
+}
+
+section#team .card-body i {
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section#team .card-body i:last-child {
+    padding-right: 0px;
+}
+
+section#team .card-body i:hover {
+    background: #000;
+    border-radius: 50%;
+}
+
+section#team .card-bg {
+    background: #ff1900;
+}
+
+section#team .col:last-child p {
     font-size: 18px;
 }
 
-@media (min-width: 991.98px) and (max-width: 1200px) {
-    section#menu p {
-        font-size: 15px;
+section#team .row-up h3 {
+    font-size: 40px;
+}
+
+section#team .row-up p {
+    font-size: 18px;
+}
+
+@media (max-width: 575.98px) {
+    section#team .row-up h3 {
+        font-size: 30px;
     }
 }
 
@@ -233,8 +325,10 @@ section#menu p {
 
 
 
+
+
 /* General */
-section{
+section {
     padding: 100px 0;
 }
 
