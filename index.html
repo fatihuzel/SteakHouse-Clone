@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steak House</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
 </head>
@@ -24,24 +23,24 @@
                     <div class="carousel-inner">
                         <div class="carousel-item carousel-item1 active">
                             <div class="card-img-overlay d-flex flex-column text-center align-content-center justify-content-center">
-                                <h1 class="text-light display-1 fw-bold">Steak House</h1>
-                                <p class="text-light mb-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                <h1 class="text-light display-1 fw-bold wow fadeInUp" data-wow-duration="1s">Steak House</h1>
+                                <p class="text-light mb-0 wow fadeInUp" data-wow-duration="2s">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
                                     diam nonummy nibh
                                     euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.
                                 </p>
-                                <a href="#feature"><button
+                                <a href="#feature" class="wow fadeInUp"data-wow-duration="3s"><button
                                         class="btn btn border border-3 border-white text-light ftr">DISCOVER NOW</button></a>
                             </div>
                         </div>
                         <div class="carousel-item carousel-item2">
                             <div
                                 class="card-img-overlay d-flex flex-column text-center align-content-center justify-content-center">
-                                <h1 class="text-light display-1 fw-bold">Steak House</h1>
-                                <p class="text-light mb-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                <h1 class="text-light display-1 fw-bold wow fadeInUp" data-wow-duration="1s">Steak House</h1>
+                                <p class="text-light mb-0 wow fadeInUp" data-wow-duration="2s">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
                                     diam nonummy nibh
                                     euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.
                                 </p>
-                                <a href="#feature"><button
+                                <a href="#feature" class="wow fadeInUp" data-wow-duration="3s"><button
                                         class="btn btn border border-3 border-white text-light">DISCOVER
                                         NOW</button></a>
                             </div>
@@ -49,12 +48,12 @@
                         <div class="carousel-item carousel-item3">
                             <div
                                 class="card-img-overlay d-flex flex-column text-center align-content-center justify-content-center">
-                                <h1 class="text-light display-1 fw-bold">Steak House</h1>
-                                <p class="text-light mb-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                                <h1 class="text-light display-1 fw-bold wow fadeInUp" data-wow-duration="1s">Steak House</h1>
+                                <p class="text-light mb-0 wow fadeInUp" data-wow-duration="2s">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
                                     diam nonummy nibh
                                     euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.
                                 </p>
-                                <a href="#feature"><button
+                                <a href="#feature" class="wow fadeInUp" data-wow-duration="3s"><button
                                         class="btn btn border border-3 border-white text-light">DISCOVER
                                         NOW</button></a>
                             </div>
@@ -66,7 +65,7 @@
     </header>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md bg-white " id="feature">
+    <nav class="navbar navbar-expand-md bg-white position-sticky top-0" id="feature" style="z-index: 1;">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#features">Steak House</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-drop-down"
@@ -105,13 +104,13 @@
     <!-- Section Features -->
     <section id="features" class="bg-light">
         <div class="container">
-            <div class="row text-center row-down">
+            <div class="row text-center row-down wow fadeInUp">
                 <h1>WHY CHOOSE US?</h1>
                 <h4 class="text-muted opacity-75">STEAK HOUSE HTML CSS TEMPLATE</h4>
             </div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                <div class="col">
-                    <div class="card text-center p-4 border-0">
+                <div class="col wow fadeInUp" data-wow-duration="2s">
+                    <div class="card text-center p-4 border-0 ">
                         <div class="card-body">
                             <span><i class="fa fa-cutlery d-flex justify-content-center align-items-center bg-dark text-white fs-3 rounded-circle translate-middle-x"></i></span>
                             <h3>SPECIAL DISH</h3>
@@ -119,7 +118,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col wow fadeInUp" data-wow-duration="2s">
                     <div class="card card2 text-center p-4 border-0">
                         <div class="card-body">
                             <span><i class="fa fa-coffee d-flex justify-content-center align-items-center bg-dark text-white fs-3 rounded-circle translate-middle-x"></i></span>
@@ -128,7 +127,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col wow fadeInUp" data-wow-duration="2s">
                     <div class="card card3 text-center p-4 border-0">
                         <div class="card-body">
                             <span><i class="fa fa-bell d-flex justify-content-center align-items-center bg-dark text-white fs-3 rounded-circle translate-middle-x"></i></span>
@@ -144,16 +143,16 @@
     <!-- Section About -->
     <section id="about">
         <div class="container">
-            <div class="row text-center row-down">
+            <div class="row text-center row-down wow fadeInUp">
                 <h1>OUR STORY</h1>
                 <h4 class="text-muted opacity-75">YOUR DINING RESTAURANT SINCE 1989</h4>
             </div>
             <div class="row g-3">
-                <div class="col-12 col-md-5 col-lg-3">
+                <div class="col-12 col-md-5 col-lg-3 wow fadeInUp" data-wow-duration="1s">
                     <img src="/images/about-img.jpg" class="img-fluid" alt="about-img">
                     <h3 class="mt-4">Nunc ullamcorper suscipit neque, ac malesuada purus molestie non.</h3>
                 </div>
-                <div class="col-12 col-md-6 col-lg-5">
+                <div class="col-12 col-md-6 col-lg-5 wow fadeInUp" data-wow-duration="2s">
                     <div id="slide-images" class="carousel slide" data-bs-ride="carousel">
                         <ol class="carousel-indicators">
                             <li data-bs-target="#slide-images" data-bs-slide-to="0" class="active"
@@ -180,7 +179,7 @@
                         amet.</p>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 text-muted">
+                <div class="col-12 col-lg-4 text-muted wow fadeInUp" data-wow-duration="3s">
                     <h2 class="fw-normal display-6">FINE DINING</h2>
                     <p>Steak House is free website template in HTML CSS for everyone. Please tell your friends about <span class="text-primary opacity-75"><a href="#" class="text-decoration-none">Tooplate</a></span> site.</p>
                     <p>Vestibulum id iaculis nisl. Pellentesque nec tortor sagittis, scelerisque ante at, sollicitudin leo. Vivamus pulvinar a
@@ -201,8 +200,8 @@
             <a href="https://www.youtube.com/watch?v=j-_7Ub-Zkow" class="mb-4 text-decoration-none">
                 <i class="fa fa-play border border-2 text-white rounded-circle text-center fs-3 align-items-center justify-content-center d-flex m-auto"></i>
             </a>
-            <h3 class="text-light fw-bold display-5">WATCH THE VIDEO</h3>
-            <p class="text-light opacity-50 mb-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.
+            <h3 class="text-light fw-bold display-5 wow fadeInUp" data-wow-duration="1s">WATCH THE VIDEO</h3>
+            <p class="text-light opacity-50 mb-0 wow fadeInUp" data-wow-duration="2s">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.
             </p>
         </div>
     </section>
@@ -210,12 +209,12 @@
     <!-- Section Menu -->
     <section id="menu">
         <div class="container">
-            <div class="row text-center row-down">
+            <div class="row text-center row-down wow fadeInUp">
                 <h1>FOOD MENU</h1>
                 <h4 class="text-muted opacity-75">WE HAVE SPECIAL MENUS</h4>
             </div>
             <div class="row row-cols-1 row-cols-lg-2">
-                <div class="col mt-0">
+                <div class="col mt-0 wow fadeInUp" data-wow-duration="1s">
                     <div class="card border-1">
                         <div class="row g-0 ">
                             <div class="col-sm-5 position-relative position-relative">
@@ -234,7 +233,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col mt-4 mt-lg-0">
+                <div class="col mt-4 mt-lg-0 wow fadeInUp" data-wow-duration="2s">
                     <div class="card border-1">
                         <div class="row g-0 ">
                             <div class="col-sm-5 position-relative">
@@ -253,7 +252,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col mt-0 mt-4">
+                <div class="col mt-0 mt-4 wow fadeInUp" data-wow-duration="3s">
                     <div class="card border-1">
                         <div class="row g-0 ">
                             <div class="col-sm-5 position-relative">
@@ -272,7 +271,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col mt-0 mt-4">
+                <div class="col mt-0 mt-4 wow fadeInUp" data-wow-duration="4s">
                     <div class="card border-1">
                         <div class="row g-0 ">
                             <div class="col-sm-5 position-relative">
@@ -291,7 +290,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col mt-0 mt-4">
+                <div class="col mt-0 mt-4 wow fadeInUp" data-wow-duration="5s">
                     <div class="card border-1">
                         <div class="row g-0 ">
                             <div class="col-sm-5 position-relative">
@@ -310,7 +309,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col mt-0 mt-4">
+                <div class="col mt-0 mt-4 wow fadeInUp" data-wow-duration="6s">
                     <div class="card border-1">
                         <div class="row g-0 ">
                             <div class="col-sm-5 position-relative">
@@ -337,16 +336,16 @@
     <!-- Section Team-->
     <section id="team" class="bg-light">
         <div class="container">
-            <div class="row text-center row-down">
+            <div class="row text-center row-down wow fadeInUp">
                 <h1>MEET OUR CHEFS</h1>
                 <h4 class="text-muted opacity-75">WE ARE FOOD SPECIALISTS</h4>
             </div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-                <div class="col">
+                <div class="col wow fadeInUp" data-wow-duration="1s">
                     <div class="card border-0">
                         <div class="card-head">
                             <img src="images/chef1.jpg " alt="chef1" class="img-fluid">
-                            <div class="card-body p-3 text-center bottom-0">
+                            <div class="card-body p-3 text-center bottom-0 flex-column">
                                 <h3>Sandar</h3>
                                 <p class="mb-0">KITCHEN MANAGER</p>
                                 <div class="icon">
@@ -364,7 +363,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col wow fadeInUp" data-wow-duration="2s">
                     <div class="card border-0">
                         <div class="card-head">
                             <img src="images/chef2.jpg " alt="chef1" class="img-fluid">
@@ -380,7 +379,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col wow fadeInUp" data-wow-duration="3s">
                     <div class="card border-0">
                         <div class="card-head">
                             <img src="images/chef3.jpg " alt="chef1" class="img-fluid">
@@ -399,7 +398,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col wow fadeInUp" data-wow-duration="4s">
                     <div class="card card-bg border-0 h-100">
                         <div class="card-head text-center text-white py-4 px-3 d-flex flex-column justify-content-around h-100">
                             <i class="fa fa-plus fs-3 mb-3"></i>
@@ -410,12 +409,12 @@
                 </div>
             </div>
             <div class="row row-cols-1 row-cols-md-2 pt-5 row-up g-4">
-                <div class="col text-center">
+                <div class="col text-center wow fadeInUp" data-wow-duration="1s">
                     <h3>OUR TASTE</h3>
                     <p class="text-muted">Fusce lobortis quis nisl nec facilisis. Donec fringilla ipsum arcu, quis maximus est molestie eget. Nunc ullamcorper
                     suscipit neque, ac malesuada purus molestie non. Phasellus sollicitudin urna sed ultrices dictum.</p>
                 </div>
-                <div class="col text-center">
+                <div class="col text-center wow fadeInUp" data-wow-duration="2s">
                     <h3>OUR SERVICE</h3>
                     <p class="text-muted">Maecenas dictum cursus dui, quis mattis eros ultricies sed. Maecenas ligula nulla, dictum eu cursus id, semper in orci.
                     Fusce vel nisi hendrerit justo viverra vehicula in nec nunc. Curabitur blandit fringilla quam.</p>
@@ -424,10 +423,47 @@
         </div>
     </section>
 
-    
+    <!-- Section Gallery -->
+    <section id="gallery">
+        <div class="container">
+            <div class="row text-center row-down wow fadeInUp">
+                <h1>MEET OUR CHEFS</h1>
+                <h4 class="text-muted opacity-75">WE ARE FOOD SPECIALISTS</h4>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="filters ">
+                        <li class="active" data-filter="*"><a href="#">Show All</a></li>
+                        <li data-filter=".breakfast"><a href="#">BREAKFAST</a></li>
+                        <li data-filter=".pizza"><a href="#" class="mt-3 mt-sm-0">PIZZA</a></li>
+                        <li data-filter=".lunch"><a href="#">LUNCH</a></li>
+                        <li data-filter=".dinner"><a href="#" class="mt-3 mt-lg-0">DINNER</a></li>
+                    </ul>
+                    <div class="gallery-inner">
+                        <div class="row grid g-3 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                            <div class="item breakfast pizza lunch">
+                                <div>
+                                    <div class="card-head">
+                                        <img src="images/gallery-img1.jpg" alt="gallery-img1" class="img-fluid">
+                                        <div class="card-body">
+                                        <h3 class="opacity-50 text-center p-3 m-0 ">Lorem One</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="main.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>

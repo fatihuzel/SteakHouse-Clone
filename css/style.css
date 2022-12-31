@@ -110,7 +110,7 @@ nav .navbar-nav .nav-link:hover {
     color: #0044ff;
 }
 
-nav .navbar-nav .nav-link.active {
+nav .navbar-nav .nav-item.active {
     color: #0044ff;
 }
 
@@ -240,39 +240,35 @@ section#team p {
     font-size: 12px;
 }
 
-section#team .card {
+section#team .card-head {
     position: relative;
-    overflow: hidden;
-    border-radius: 0;
 }
 
 section#team .card-body {
+    background: #fff;
     position: absolute;
     bottom: 0px;
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    transition: ease-in-out 0.5s;
-    background: #fff;
+    transition: height 450ms;
 }
 
-section#team .card-body:hover {
-    background: #ff1900;
+section#team .card-head:hover .card-body{
+    color: #ffffff;
     height: 100%;
-    opacity: .7;
-    color: #fff;
+    background-color: #ff1900;
+    padding-top: 30%;
+    opacity: 0.8;
 }
 
 section#team .card-body .icon {
-    height: 40px;
-    position: absolute;
-    margin-bottom: -100px;
-    display: flex;
-}
-
-section#team .card-body .icon:hover {
-    height: 40px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
 
 section#team .card-body .icon a {
@@ -301,6 +297,27 @@ section#team .card-bg {
     background: #ff1900;
 }
 
+/* section#team .card-bg .card-head .btn {
+    position: relative;
+    overflow: hidden;
+}
+
+section#team .card-bg .card-head .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 0%;
+    background-color: #fff;
+    transition: all 1.5s;
+    z-index: -1;
+}
+
+section#team .card-bg .card-head .btn:hover::before {
+    height: 100%;
+} */
+
 section#team .col:last-child p {
     font-size: 18px;
 }
@@ -317,6 +334,49 @@ section#team .row-up p {
     section#team .row-up h3 {
         font-size: 30px;
     }
+}
+
+/* Section Gallery */
+section#gallery .row-down {
+    padding: 0 0 40px 0;
+}
+
+section#gallery ul.filters {
+    padding: 0 0 50px 0;
+    justify-content: center;
+    display: flex;
+}
+
+section#gallery ul.filters>li {
+    list-style: none;
+    padding-right: 10px;
+}
+
+section#gallery ul.filters>li:last-child {
+    padding-right: 0;
+}
+
+section#gallery ul.filters>li>a {
+    color: #666;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 8px 17px;
+    margin-right: 2px;
+    margin-left: 2px;
+    text-transform: uppercase;
+    display: block;
+    text-decoration: none;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+section#gallery ul.filters>li>a:hover {
+    color: #ff1900;
+}
+
+section#gallery ul.filters>li.active>a {
+    color: #ff1900;
 }
 
 
