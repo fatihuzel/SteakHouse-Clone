@@ -349,21 +349,13 @@ section#gallery ul.filters {
 
 section#gallery ul.filters>li {
     list-style: none;
-    padding-right: 10px;
-}
-
-section#gallery ul.filters>li:last-child {
-    padding-right: 0;
 }
 
 section#gallery ul.filters>li>a {
     color: #666;
-    font-size: 16px;
     font-weight: 600;
     letter-spacing: 2px;
     padding: 8px 17px;
-    margin-right: 2px;
-    margin-left: 2px;
     text-transform: uppercase;
     display: block;
     text-decoration: none;
@@ -375,8 +367,29 @@ section#gallery ul.filters>li>a:hover {
     color: #ff1900;
 }
 
-section#gallery ul.filters>li.active>a {
+section#gallery ul.filters>li.active > a {
     color: #ff1900;
+}
+
+section#gallery .card-head .m-link {
+    position: relative;
+    display: block;
+}
+
+section#gallery .card-head .m-link .m-hover {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ff1900;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity ease-in-out 0.3s;
+}
+
+section#gallery .card-head .m-link:hover .m-hover {
+    opacity: .6;
 }
 
 
