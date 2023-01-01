@@ -17,7 +17,7 @@
 <body>
 
     <!-- Header -->
-    <header class="container-fluid g-0">
+    <header class="container-fluid g-0" id="home">
         <div class="row g-0">
             <div class="col">
                 <div class="carousel slide" id="mySlide" data-bs-ride="carousel">
@@ -83,9 +83,9 @@
             </button>
 
             <div class="collapse navbar-collapse" id="collapse-drop-down">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto smoothScroll">
                     <li class="nav-item fw-semibold">
-                        <a class="nav-link active" href="#home">Home</a>
+                        <a class="nav-link " href="#home">Home</a>
                     </li>
                     <li class="nav-item fw-semibold">
                         <a class="nav-link" href="#features">Features</a>
@@ -568,12 +568,25 @@
     <!-- Section Contact -->
     <section id="contact">
         <div class="container">
-            <div class="row text-center row-down wow fadeInUp">
+            <div class="row text-center row-down wow fadeInUp text-white">
                 <h1>SAY HELLO</h1>
                 <h4 class="text-muted opacity-75">WE ARE ALWAYS READY TO SERVE YOU!</h4>
             </div>
-            <form>
-                
+            <form class="wow fadeInUp d-flex flex-column need-validation" id="FormContact" novalidate>
+                <input type="text" class="form-control" id="name" placeholder="Your Name" required maxlength="40" aria-describedby="ErrName">
+                <div class="invalid-feedback" id="ErrName"></div>
+
+                <input type="email" class="form-control" id="email" placeholder="Your Email" aria-describedby="ErrEmail">
+                <div class="invalid-feedback" id="ErrEmail"></div>
+
+                <textarea id="message" class="form-control" placeholder="Message" required maxlength="300" aria-describedby="ErrMessage"></textarea>
+                <div class="text-white text-end">
+                    <span id="current-character">0</span>
+                    <span> / 300</span>
+                </div>
+
+                <div class="invalid-feedback" id="ErrMessage"></div>
+                <a href="#" class="d-flex align-items-center justify-content-center text-decoration-none ">SEND MESSAGE</a>
             </form>
         </div>
     </section>
@@ -642,6 +655,20 @@
                 );
             });
         })(jQuery);
+    </script>
+    <!-- Scrool -->
+    <script>
+        const li=document.querySelectorAll('.nav-item');
+        const sec=document.querySelectorAll('section');
+
+        function activeMenu(){
+            let len=sec.length;
+            while(--len && window.scrollY + 66 < sec[len].offsetTop){}
+            li.forEach(ltx => ltx.classList.remove("active"));
+            li[len].classList.add("active");
+        }
+        activeMenu();
+        window.addEventListener("scroll",activeMenu);
     </script>
 </body>
 

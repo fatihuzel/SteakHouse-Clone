@@ -2,6 +2,7 @@
 
 body {
     font-weight: 300;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1,
@@ -102,16 +103,16 @@ nav .navbar-nav {
     align-items: center;
 }
 
-nav .navbar-nav .nav-link {
-    transition: .4s ease-in-out;
+nav .navbar-nav li a {
+    transition: all 0.5s ease-in-out;
 }
 
-nav .navbar-nav .nav-link:hover {
-    color: #0044ff;
+nav .navbar-nav>li a:hover {
+    color: #ff1900 !important;
 }
 
-nav .navbar-nav .nav-item.active {
-    color: #0044ff;
+nav .navbar-nav >.nav-item.active>a {
+    color: #ff1900;
 }
 
 /* Section Features */
@@ -187,7 +188,7 @@ section#video {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-image: url(/images/video-bg.jpg);
-    min-height: 400px;
+    min-height: 465px;
     border: 0;
 }
 
@@ -392,6 +393,83 @@ section#gallery .card-head .m-link:hover .m-hover {
     opacity: .6;
 }
 
+/* Section Contact */
+section#contact {
+    position: relative;
+    background: url(/images/contact-bg.jpg) 50% 0 repeat-y fixed;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    min-height: 700px;
+}
+
+/* section#contact::before {
+    content: '';
+    background: #000000b3;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.7;
+} */
+
+section#contact .container {
+    max-width: 800px;
+    color: #fff;
+    z-index: 1;
+}
+
+section#contact form input, 
+section#contact form textarea {
+    border: none;
+    border-bottom: 1px solid #666;
+    padding: 6px 12px;
+    margin-bottom: 16px;
+    height: 50px;
+    background: #0000;
+    border-radius: 0px;
+    box-shadow: none;
+    color: #fff;
+    font-size: 18px;
+    transition: all 0.4s ease-in-out;
+}
+
+section#contact form input:hover, 
+section#contact form textarea:hover {
+    border-bottom: #ddd;
+}
+
+section#contact form input:focus-visible, 
+section#contact form textarea:focus-visible {
+    border:none;
+}
+
+section#contact form textarea {
+    min-height: 200px;
+    overflow: auto;
+}
+
+section#contact form ::placeholder {
+    color: #505050;
+}
+
+section#contact form a {
+    background: #fff;
+    border-radius: 4px;
+    color: #ff1900;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    height: 50px;
+    margin-top: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+section#contact form a:hover {
+    color:#fff;
+    background: #ff1900;
+}
+
 
 
 
@@ -417,17 +495,3 @@ section h4 {
     font-size: 12px;
     letter-spacing: 3px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-font-family: 'Source Sans Pro',sans-serif; */
