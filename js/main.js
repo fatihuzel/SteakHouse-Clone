@@ -9,9 +9,9 @@
         myBtn.disabled = true;
     }
     const spacePattern = /^\S*$/;
-    const NumericPattern = /^([^0-9]*)$/; // sayı istemeyenler için
+    const NumericPattern = /^([^0-9]*)$/;
     const EmailPattern = /^([a-zA-Z0-9_\-?\.?]){3,}@([a-zA-Z]){3,}\.([a-zA-Z]){2,5}$/;
-    const OnlyNumberPattern = /^[0-9]*$/; // sayı isteyenler için
+    const OnlyNumberPattern = /^[0-9]*$/;
 
     myName.addEventListener("blur", controlName);
     myEmail.addEventListener("blur", controlEmail);
@@ -22,27 +22,27 @@
         if (myName.value.length == 0) {
             myName.classList.remove("is-valid");
             myName.classList.add("is-invalid");
-            myError.textContent = "İsim alanı boş bırakılamaz";
+            myError.innerHTML = '<span class="fs-6 text-light"> The name field cannot be left blank.</span >';
             return false;
         } else if (myName.value.length < 3) {
             myName.classList.remove("is-valid");
             myName.classList.add("is-invalid");
-            myError.textContent = "İsminiz 3 karakterden az olamaz";
+            myError.innerHTML = '<span class="fs-6 text-light">Your name cannot be less than 3 characters.</span >';
             return false;
         } else if (myName.value.length > 30) {
             myName.classList.remove("is-valid");
             myName.classList.add("is-invalid");
-            myError.textContent = "İsminiz 30 karakterden fazla olamaz";
+            myError.innerHTML = '<span class="fs-6 text-light">Your name cannot be more than 30 characters.</span >';
             return false;
         } else if (!spacePattern.test(myName.value)) {
             myName.classList.remove("is-valid");
             myName.classList.add("is-invalid");
-            myError.textContent = "İsminizde boşluk bıraktınız";
+            myError.innerHTML = '<span class="fs-6 text-light">You left a space in your name.</span >';
             return false;
         } else if (!NumericPattern.test(myName.value)) {
             myName.classList.remove("is-valid");
             myName.classList.add("is-invalid");
-            myError.textContent = "İsminizde rakam kullanamazsınız!";
+            myError.innerHTML = '<span class="fs-6 text-light">You can\'t use numbers in your name!</span >';
             return false;
         } else {
             myName.classList.remove("is-invalid");
@@ -56,27 +56,28 @@
         if (myEmail.value.length == 0) {
             myEmail.classList.remove("is-valid");
             myEmail.classList.add("is-invalid");
-            myError.textContent = "Eposta alanı boş bırakılamaz";
+            myError.innerHTML = '<span class="fs-6 text-light">Email field cannot be left blank.</span >';
             return false;
         } else if (myEmail.value.length < 4) {
             myEmail.classList.remove("is-valid");
             myEmail.classList.add("is-invalid");
-            myError.textContent = "İsminiz 4 karakterden az olamaz";
+            // myError.innerHTML = "Your email cannot be less than 4 characters.";
+            myError.innerHTML = '<span class="fs-6 text-light"> Your email cannot be less than 4 characters.</span >';
             return false;
         } else if (myEmail.value.length > 30) {
             myEmail.classList.remove("is-valid");
             myEmail.classList.add("is-invalid");
-            myError.textContent = "İsminiz 30 karakterden fazla olamaz";
+            myError.innerHTML = '<span class="fs-6 text-light">Your email cannot be more than 30 characters.</span >';
             return false;
         } else if (!spacePattern.test(myEmail.value)) {
             myEmail.classList.remove("is-valid");
             myEmail.classList.add("is-invalid");
-            myError.textContent = "Eposta adresinizde boşluk bıraktınız";
+            myError.innerHTML = '<span class="fs-6 text-light">You left a space in your email address.</span >';
             return false;
         } else if (!EmailPattern.test(myEmail.value)) {
             myEmail.classList.remove("is-valid");
             myEmail.classList.add("is-invalid");
-            myError.textContent = "Eposta formatınız yanlış. Tekrardan kontrol edin!";
+            myError.innerHTML = '<span class="fs-6 text-light">Your email format is incorrect. Check it again!</span >';
             return false;
         } else {
             myEmail.classList.remove("is-invalid");
@@ -90,12 +91,12 @@
         if (myMessage.value.length == 0) {
             myMessage.classList.remove("is-valid");
             myMessage.classList.add("is-invalid");
-            myError.textContent = "Mesaj alanı boş bırakılamaz";
+            myError.innerHTML = '<span class="fs-6 text-light">The message field cannot be left blank.</span >';
             return false;
         } else if (myMessage.value.length < 10) {
             myMessage.classList.remove("is-valid");
             myMessage.classList.add("is-invalid");
-            myError.textContent = "Mesajınız 10 karakterden az olamaz";
+            myError.innerHTML = '<span class="fs-6 text-light">Your message cannot be less than 10 characters.</span >';
             return false;
         } else {
             myMessage.classList.remove("is-invalid");
@@ -104,19 +105,17 @@
         }
     }
 
-
-    // message kısmı myMessage.value.length >= 10 bununla birlikte 10 karakter veya eşit 10 karakter yazılmış ise messsage aktif ediyor. keyup ile her harf basmaya sayı sayıyor
     myMessage.addEventListener("keyup", function () {
-        document.getElementById("current-character").textContent = myMessage.value.length;
+        document.getElementById("current-character").innerText = myMessage.value.length;
         if (myMessage.value.length >= 10) {
             myBtn.disabled = false;
         } else {
             myBtn.disabled = true;
         }
     });
-    var myForms = document.querySelector(".needs-validation");
+    var myForms = document.querySelector(".need-validation");
     myForms.addEventListener("submit", function (e) {
-        if (!myForms.checkValidity() ||  // checkvalidity sorun varsa kontrol ediyor
+        if (!myForms.checkValidity() ||
             !controlName() ||
             !controlEmail() ||
             !controlMessage()) {

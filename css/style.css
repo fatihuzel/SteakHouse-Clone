@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
 
+/* General */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-weight: 300;
     font-family: 'Source Sans Pro', sans-serif;
@@ -12,6 +17,32 @@ h3,
 p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+}
+
+p {
+    letter-spacing: .8;
+}
+
+.container {
+    max-width: 1100px;
+}
+
+section,
+footer {
+    padding: 100px 0;
+}
+
+section .row-down {
+    padding-bottom: 85px;
+}
+
+section h1 {
+    color: #333;
+}
+
+section h4 {
+    font-size: 12px;
+    letter-spacing: 3px;
 }
 
 /* Header */
@@ -111,8 +142,16 @@ nav .navbar-nav>li a:hover {
     color: #ff1900 !important;
 }
 
-nav .navbar-nav >.nav-item.active>a {
+nav .navbar-nav>.nav-item.active>a {
     color: #ff1900;
+}
+
+
+@media (max-width: 991.98px) {
+    nav .navbar-collapse {
+        background-color: #fff;
+        z-index: 2;
+    }
 }
 
 /* Section Features */
@@ -182,26 +221,24 @@ section#about .col-4 ul li {
 
 /* Section Video-bg */
 section#video {
-    padding: 0px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-image: url(/images/video-bg.jpg);
     min-height: 465px;
-    border: 0;
+    position: relative;
+    border: none;
+
 }
 
-section#video::before {
-    content: '';
-    width: 100%;
-    height: 100%;
+section#video>.overlay {
     position: absolute;
-    background: linear-gradient(to right, #000, #333);
+    background: #000000b3;
     top: 0;
     left: 0;
-    opacity: 0.7;
-    z-index: 1;
+    bottom: 0;
+    right: 0;
 }
 
 section#video a i {
@@ -211,6 +248,8 @@ section#video a i {
 
 section#video .card-img-overlay {
     z-index: 1;
+    position: relative;
+    max-width: 750px;
 }
 
 /* Section Menu */
@@ -241,7 +280,7 @@ section#team p {
     font-size: 12px;
 }
 
-section#team .card-head {
+section#team .card {
     position: relative;
 }
 
@@ -258,7 +297,7 @@ section#team .card-body {
     transition: height 450ms;
 }
 
-section#team .card-head:hover .card-body{
+section#team .card:hover .card-body {
     color: #ffffff;
     height: 100%;
     background-color: #ff1900;
@@ -297,27 +336,6 @@ section#team .card-body i:hover {
 section#team .card-bg {
     background: #ff1900;
 }
-
-/* section#team .card-bg .card-head .btn {
-    position: relative;
-    overflow: hidden;
-}
-
-section#team .card-bg .card-head .btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 0%;
-    background-color: #fff;
-    transition: all 1.5s;
-    z-index: -1;
-}
-
-section#team .card-bg .card-head .btn:hover::before {
-    height: 100%;
-} */
 
 section#team .col:last-child p {
     font-size: 18px;
@@ -368,7 +386,7 @@ section#gallery ul.filters>li>a:hover {
     color: #ff1900;
 }
 
-section#gallery ul.filters>li.active > a {
+section#gallery ul.filters>li.active>a {
     color: #ff1900;
 }
 
@@ -396,30 +414,35 @@ section#gallery .card-head .m-link:hover .m-hover {
 /* Section Contact */
 section#contact {
     position: relative;
-    background: url(/images/contact-bg.jpg) 50% 0 repeat-y fixed;
-    background-size: cover;
-    background-position: center center;
-    position: relative;
     min-height: 700px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(/images/contact-bg.jpg);
 }
 
-/* section#contact::before {
-    content: '';
-    background: #000000b3;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+section#contact .overlay {
     top: 0;
-    opacity: 0.7;
-} */
-
-section#contact .container {
-    max-width: 800px;
-    color: #fff;
-    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background: #000000b3;
 }
 
-section#contact form input, 
+section#contact>.container {
+    max-width: 800px;
+    z-index: 1;
+    position: relative;
+}
+
+section#contact>.container h1,
+h4 {
+    color: #fff;
+}
+
+section#contact form input,
 section#contact form textarea {
     border: none;
     border-bottom: 1px solid #666;
@@ -434,14 +457,14 @@ section#contact form textarea {
     transition: all 0.4s ease-in-out;
 }
 
-section#contact form input:hover, 
+section#contact form input:hover,
 section#contact form textarea:hover {
     border-bottom: #ddd;
 }
 
-section#contact form input:focus-visible, 
+section#contact form input:focus-visible,
 section#contact form textarea:focus-visible {
-    border:none;
+    border: none;
 }
 
 section#contact form textarea {
@@ -453,7 +476,12 @@ section#contact form ::placeholder {
     color: #505050;
 }
 
-section#contact form a {
+section#contact form span {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+section#contact form button {
     background: #fff;
     border-radius: 4px;
     color: #ff1900;
@@ -463,35 +491,57 @@ section#contact form a {
     height: 50px;
     margin-top: 10px;
     transition: all 0.4s ease-in-out;
+    border: none;
+    cursor: pointer;
 }
 
-section#contact form a:hover {
-    color:#fff;
+section#contact form button:hover {
+    color: #fff;
     background: #ff1900;
 }
 
+/* Footer */
 
-
-
-
-
-
-
-
-/* General */
-section {
-    padding: 100px 0;
+footer h3,
+footer strong {
+    font-size: 20px;
+    padding-bottom: 15px;
 }
 
-section .row-down {
-    padding-bottom: 85px;
+footer strong {
+    padding-bottom: 0px;
 }
 
-section h1 {
-    color: #333;
+footer p {
+    padding-bottom: 10px;
+    margin: 0;
+    font-size: 18px;
 }
 
-section h4 {
-    font-size: 12px;
-    letter-spacing: 3px;
+/* Copyright */
+div.cpy a.return {
+    width: 72px;
+    height: 72px;
+    position: relative;
+}
+
+div.cpy a.return i {
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    font-size: 30px;
+    color: #fff;
+    background: #333;
+    transition: .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+div.cpy a.return i:hover {
+    background: #ff1900;
+}
+
+@media (max-width: 575.98px) {
+    div.cpy p {
+        height: auto;
+        font-size: 15px;
+    }
 }
