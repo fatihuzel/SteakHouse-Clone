@@ -147,10 +147,13 @@ nav .navbar-nav>.nav-item.active>a {
 }
 
 
-@media (max-width: 991.98px) {
+@media (max-width: 765.98px) {
     nav .navbar-collapse {
-        background-color: #fff;
-        z-index: 2;
+        height: 280px;
+        transition: .5s ease;
+    }
+    nav .navbar-nav {
+        align-items: flex-start;
     }
 }
 
